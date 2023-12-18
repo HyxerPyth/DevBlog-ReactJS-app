@@ -1,0 +1,14 @@
+.header {
+    grid-area: h;
+    margin-left: 10px;
+    position: fixed;
+    backface-visibility: visible;
+    background-color: black;
+    width: 10000%;
+}
+
+.header img {
+    object-fit:cover;
+    width:12px;
+    height:25px;
+}

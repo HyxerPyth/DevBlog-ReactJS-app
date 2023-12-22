@@ -1,0 +1,16 @@
+.appWrapper {
+    display: grid;
+    background-color: black;
+    font-family: 'SF Mono', Menlo, Monaco, 'Courier New', monospace;
+    color: #13ff00;
+    margin: 0;
+  
+    grid-template-areas: 
+      "h h"
+      "c c";
+  
+     grid-template-rows: 60px 1fr;
+      grid-template-columns: 2fr 10fr;
+      /* grid-gap: 10px; */
+  
+  }

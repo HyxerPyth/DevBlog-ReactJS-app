@@ -7,7 +7,8 @@ const Post = (props) => {
     return (
         <div className={style.post}>
             <div>
-                { props.massage }
+                { props.message }
+                { props.aboutus }
             </div>
         </div>
     );

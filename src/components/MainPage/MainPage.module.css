@@ -1,8 +1,8 @@
 .appWrapper {
     display: grid;
-    background-color: black;
+    background-color: #102032;
     font-family: 'SF Mono', Menlo, Monaco, 'Courier New', monospace;
-    color: #13ff00;
+    color: #e7ecee;
     margin: 0;
   
     grid-template-areas: 

@@ -1,9 +1,8 @@
 .post {
-    background: rgb(22,22,22);
-    background: linear-gradient(90deg, rgba(22,22,22,1) 50%, rgba(0,0,0,1) 100%);
-   border-radius: 10px;
-   block-size: auto;
-   justify-content: center;
-   padding-top: 10px;
-   padding-bottom: 10px;
+    background-color: #102032;
+    border-radius: 10px;
+    block-size: auto;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

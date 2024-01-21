@@ -1,20 +1,23 @@
 import React from "react";
+import style from "./MainPage.module.css"
 import Content from "../Content/Content";
 import Header from "../Header/Header";
-import s from "./MainPage.module.css"
 import NavBar from "../NavBar/NavBar";
-
-
 
 
 const MainPage = () => {
     return (
-        <div className={s.appWrapper}>
-            <Content />
+        <div className={style.appWrapper}>
             <Header />
             <NavBar />
+            <div>
+                <textarea className={style.textArea}>
+                    Hello
+                </textarea>
+            </div>
         </div>
     );
-}
+};
 
 export default MainPage;
+

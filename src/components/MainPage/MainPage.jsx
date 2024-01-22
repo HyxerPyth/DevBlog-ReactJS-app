@@ -12,8 +12,11 @@ const MainPage = () => {
             <NavBar />
             <div>
                 <textarea className={style.textArea}>
-                    Hello
+                  Type here...
                 </textarea>
+            </div>
+            <div className={style.button}>
+              <button> Add post </button>
             </div>
         </div>
     );

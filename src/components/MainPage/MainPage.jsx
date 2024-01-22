@@ -4,6 +4,7 @@ import Content from "../Content/Content";
 import Header from "../Header/Header";
 import NavBar from "../NavBar/NavBar";
 
+const setActive = ({isActive}) => ({color: isActive ? '#0071e3' : 'var(--color-active)'});
 
 const MainPage = () => {
     return (
@@ -11,7 +12,7 @@ const MainPage = () => {
             <Header />
             <NavBar />
             <div>
-                <textarea className={style.textArea}>
+                <textarea className={style.textArea} style={ setActive }>
                   Type here...
                 </textarea>
             </div>

@@ -1,10 +1,9 @@
 .header {
     grid-area: h;
     margin-left: 0px;
-    position: fixed;
+    position: flex;
     backface-visibility: visible;
-    background-color: #102032;
-    width: 10000%;
+    background-color: rgba(255,255,255,255);
 }
 
 

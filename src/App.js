@@ -10,7 +10,7 @@ import Content from "./components/Content/Content";
 
 
 
-function App() {
+const App = (props) => {
   return (
     <BrowserRouter>
         <div className="app-wrapper">
@@ -22,7 +22,7 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
-            <Content />
+            <Content content={props.state} dispatch={props.dispatch} />
           </div>
         </div>
     </BrowserRouter>

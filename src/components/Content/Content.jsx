@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./Content.module.css"
-import MyPosts from "./MyPosts/MyPosts";
 
 const Content = () => {
     return (
@@ -10,11 +9,12 @@ const Content = () => {
                   Type here...
                 </textarea>
             </div>
-            <div className={style.button}>
-              <button> Add post </button>
+            <div>
+              <button className={style.button}> Post </button>
             </div>
         </div>
     );
+    debugger;
 }
 
 

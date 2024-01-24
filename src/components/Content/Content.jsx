@@ -5,7 +5,14 @@ import MyPosts from "./MyPosts/MyPosts";
 const Content = () => {
     return (
         <div className={style.content}>
-            <MyPosts />
+            <div>
+                <textarea className={style.textArea}>
+                  Type here...
+                </textarea>
+            </div>
+            <div className={style.button}>
+              <button> Add post </button>
+            </div>
         </div>
     );
 }

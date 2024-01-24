@@ -1,9 +1,13 @@
-.header {
-    grid-area: h;
-    margin-left: 0px;
-    position: flex;
-    backface-visibility: visible;
+.header{
     background-color: rgba(255,255,255,255);
+}
+
+.headerName {
+    grid-area: h;
+    margin-top: 30px;
+    font-size: large;
+    display: flex;
+    margin-left: 20%;
 }
 
 

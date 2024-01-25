@@ -7,6 +7,7 @@ import Contact from "./components/Header/NavBar/Contact/Contact"
 import Header from "./components/Header/Header";
 import NavBar from "./components/Header/NavBar/NavBar";
 import Content from "./components/Content/Content";
+import PostSelection from "./components/Content/MyPosts/PostSelection/PostSeceltion";
 
 
 
@@ -21,8 +22,9 @@ const App = (props) => {
               <Route path="/about" element={<About />} />
               <Route path="/home" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/postselection" element={<PostSelection />} />
             </Routes>
-            <Content content={props.state} dispatch={props.dispatch} />
+            <Content state={props.state.content} dispatch={props.dispatch} />
           </div>
         </div>
     </BrowserRouter>

@@ -2,7 +2,7 @@ import React from 'react';
 import style from './PostSelection.module.css'
 
 
-const PostSelection = () => {
+const PostSelection = (props) => {
     return (
         <div>
             <button className={style.button}>

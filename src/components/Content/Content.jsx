@@ -8,8 +8,6 @@ import { NavLink } from "react-router-dom";
 
 const Content = (props) => {
 
-
-
     let newPostElement = React.createRef(); 
 
     let AddPost = () => {
@@ -26,7 +24,7 @@ const Content = (props) => {
     return (
         <div className={style.content}>
             <div>
-                <textarea className={style.textArea} onChange={ updatePostArea } >
+                <textarea className={style.textArea} onChange={ updatePostArea } value={ props.state.updatePostArea } ref={ newPostElement } >
                   Type here...
                 </textarea>
             </div>

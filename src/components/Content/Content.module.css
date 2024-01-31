@@ -49,7 +49,6 @@
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
     touch-action: manipulation;
     will-change: transform;
-    position: relative;
 }
   
 .button:hover {
@@ -62,4 +61,17 @@
 .button a {
     box-shadow: none;
     transform: translateY(0);
+}
+
+.instructions {
+    width: 614px;
+    height: 300px;
+    background-color: #242424;
+    opacity: 50%;
+    color:#f3ab37;
+    font-optical-sizing: 100%;
+    margin: 0;
+    position: absolute;
+    border-bottom-left-radius: 1%;
+    border-bottom-right-radius: 1%;
 }

@@ -24,7 +24,7 @@ const App = (props) => {
               <Route path="/contact" element={<Contact />} />
               <Route path="/postselection" element={<PostSelection />} />
             </Routes>
-            <Content state={props.state.content} dispatch={props.dispatch} />
+            <Content dispatch={props.dispatch} state={props.store.getState().content} />
           </div>
         </div>
     </BrowserRouter>

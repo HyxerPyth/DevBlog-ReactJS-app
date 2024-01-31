@@ -30,8 +30,7 @@ const Content = (props) => {
     return (
         <div className={style.content}>
             <div>
-                <textarea className={style.textArea} onChange={ updatePostArea } onClick={ onClickInstructions } value={ props.state.updatePostArea } ref={ newPostElement } >
-                  Type here...
+                <textarea className={style.textArea} onChange={ updatePostArea } onClick={ onClickInstructions } value={ props.state.updatePostArea } ref={ newPostElement } placeholder="Type here..." >
                 </textarea>
                 <div>
                     {ShowInstructions && (

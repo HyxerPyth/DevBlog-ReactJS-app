@@ -25,10 +25,16 @@ const postsReducer = (state=initialState, action) => {
                 header: "",
                 message: state.updatePostArea
             };
+            let updatedBlogs = state.postData.map(blog => {
+                if (blog.id === action.blogId) {
+                    return {...blog, posts: [...blog.posts, newPost]};
+                }
+                return blog;
+            });
             return {
                 ...state,
                 updatePostArea: "",
-                postData: [...state.postData, newPost]
+                postData: updatedBlogs
             };
         case UPDATE_POST_AREA:
             return {
@@ -40,5 +46,6 @@ const postsReducer = (state=initialState, action) => {
         }
 };
 
+export const addPostActionCreator = (blogId) => ({type: ADD_POST, blogId});
 export const updatePostAreaActionCreator = (body) => ( {type: UPDATE_POST_AREA, body: body} );
 export default postsReducer;

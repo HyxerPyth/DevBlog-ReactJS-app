@@ -1,30 +1,33 @@
 import React, { useState } from "react";
-import style from "./Content.module.css"
-import PostSelection from "./MyPosts/PostSelection/PostSeceltion";
-import { updatePostAreaActionCreator } from "../../redux/state"
+import style from "./PostForm.module.css"
 import { NavLink } from "react-router-dom";
 
 
 
-const Content = (props) => {
+
+const PostForm = (props) => {
 
     let [ShowInstructions, setShowInstructions] = useState(false);
 
     let newPostElement = React.createRef(); 
 
-    let AddPost = () => {
-        let text = newPostElement.current.value;
-        <NavLink to="/postselection" text={text}>Post</NavLink>
+    let onAddPost = () => {
+        props.addPost();
     }
 
     let updatePostArea = () => {
         let text = newPostElement.current.value;
-        let action = (updatePostAreaActionCreator(text))
-        props.dispatch(action)
+        props.updatePostArea(text);
     }
+
+    console.log(props.state.updatePostArea);
 
     let onClickInstructions = () => {
         setShowInstructions(true);
+    }
+
+    let instructionContainer = {
+        text: ["Just start typing your post's text in here. To highligh any code use // before and after // your code. When you are done with your post just click 'Post' button."]
     }
 
     return (
@@ -35,17 +38,19 @@ const Content = (props) => {
                 <div>
                     {ShowInstructions && (
                         <div>
-                            <p className={style.instructions}>Hello!</p>
+                            <p className={style.instructions}> {instructionContainer.text} </p>
                         </div>
                     )}
                 </div>
             </div>
             <div>
-              <button className={style.button} onClick={ AddPost } > Post </button>
+                <NavLink to="/selectoption">
+                    <button className={style.button} onClick={onAddPost} > Post </button>
+                </NavLink>
             </div>
         </div>
     )
 }
 
 
-export default Content;
+export default PostForm;

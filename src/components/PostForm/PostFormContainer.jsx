@@ -7,9 +7,7 @@ import PostForm from "./PostForm";
 const PostFormContainer = (props) => {
 
     let AddPost = () => {
-        let clearArea = updatePostAreaActionCreator("");
         props.store.dispatch(addPostActionCreator());
-        props.store.dispatch(clearArea);
     }
 
     let updatePostArea = (text) => {

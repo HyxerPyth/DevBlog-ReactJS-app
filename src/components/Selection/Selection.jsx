@@ -1,9 +1,9 @@
 import React from 'react';
-import style from './PostSelection.module.css'
+import style from './Selection.module.css'
 import { NavLink } from 'react-router-dom';
 
 
-const PostSelection = (props) => {
+const Selection = (props) => {
 
     return (
         <div className={style.contentWrapper}>
@@ -24,4 +24,4 @@ const PostSelection = (props) => {
 }
 
 
-export default PostSelection; 
+export default Selection; 

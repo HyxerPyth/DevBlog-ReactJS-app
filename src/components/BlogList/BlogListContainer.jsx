@@ -11,7 +11,7 @@ const BlogListContainer = (props) => {
     let selectOption =(blogId) => {
         props.store.dispatch(selectBlogActionCreator(blogId));
     }
-    
+
     return <BlogList selectOption={selectOption} state={state} />
 }
 

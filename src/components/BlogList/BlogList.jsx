@@ -1,19 +1,20 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import Blog from "../Blog/Blog";
+import BlogContainer from "../Blog/BlogContainer";
 
 
 const BlogList = (props) => {
 
-    let blogElement = props.state.blogData.map(blog => <Blog id={blog.id} title={blog.title} posts={blog.posts} />);
+    let blogData = props.state.blogData
+
+    let blogElement = blogData.map(blog => <BlogContainer id={blog.id} title={blog.title}/>);
+    let postElement = props.state.blogData.posts.map(post => <BlogContainer id={post.id} header={post.header} message={post.message}/>);
 
     return (
         <div>
-            <NavLink to={"/blog" + props.state.blogData.id}>
                 <button>
                     {blogElement}
                 </button>
-            </NavLink>
+                {postElement}
         </div>
     );
 }

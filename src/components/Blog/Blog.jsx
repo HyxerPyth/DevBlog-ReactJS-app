@@ -3,15 +3,11 @@ import { NavLink } from "react-router-dom";
 
 const Blog = (props) => {
 
-    let path = "/blog" + props.state.blogData.id;
+    let path = "/blog/" + props.blogId;
 
     return(
         <div>
-            <button>
-                Hello
-            </button>
-            Hello
-            <NavLink to={path}>{props.state.blogData.posts.message}</NavLink>
+            <NavLink to={path}>{props.title}</NavLink>
         </div>
     );
 }

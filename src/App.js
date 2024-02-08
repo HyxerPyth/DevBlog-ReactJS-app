@@ -9,6 +9,7 @@ import Header from "./components/Header/Header";
 import NavBar from "./components/Header/NavBar/NavBar";
 import ExistingBlogs from "./pages/ExistingBlogs/ExistingBlogs";
 import NewBlog from "./pages/NewBlog/NewBlog";
+import PostsContainer from "./components/Posts/PostsContainer";
 
 
 
@@ -26,6 +27,7 @@ const App = (props) => {
               <Route path="/selectoption" element={<SelectOption />} />
               <Route path="/existingblogs" element={<ExistingBlogs store={props.store} />} />
               <Route path="/newblog" element={<NewBlog />} />
+              <Route path="/blog/:id" element={<PostsContainer store={props.store}/>} />
             </Routes>
           </div>
         </div>

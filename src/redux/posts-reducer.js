@@ -8,9 +8,9 @@ const SELECT_BLOG = "SELECT-BLOG";
 
 let initialState = {
     blogData: [
-        {id: 1, title: "Blog 1", posts: [
-            {id: 1, header: "EXMAPLE HEADER POST 1", message: "EXAMPLE MESSAGE POST 1"}
-        ]}
+        {id: 1, title: "Blog 1"},
+        {id: 2, title: "Blog 2"},
+        {id: 3, title: "Blog 3"}
     ],
     postData: [
         {id: 1, header: "Day 1 - 11/01/2023", message: "We kicked off our journey by building a simple website using React.js for the front end and Python for the back end. We snapped four pictures of the parking lot from different angles. Our magical LLM (that's our super smart system) processed them, telling us how many cars were in each picture. It's like parking wizardry!"},

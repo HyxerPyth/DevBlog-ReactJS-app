@@ -1,8 +1,9 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import postsReducer from './posts-reducer'
 
+
 let reducers = combineReducers({
-    content: postsReducer
+    content: postsReducer,
 });
 
 let store = configureStore({

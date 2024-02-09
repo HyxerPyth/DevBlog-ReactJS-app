@@ -15,8 +15,6 @@ const PostFormContainer = (props) => {
         props.store.dispatch(action)
     }
 
-    console.log(props.store.updatePostArea);
-
     return <PostForm updatePostArea={updatePostArea} addPost={AddPost} state={props.store.getState().content}/>
 }
 

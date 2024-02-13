@@ -14,6 +14,7 @@ import PostsContainer from "./components/Posts/PostsContainer";
 
 
 const App = (props) => {
+
   return (
     <BrowserRouter>
         <div className="app-wrapper">

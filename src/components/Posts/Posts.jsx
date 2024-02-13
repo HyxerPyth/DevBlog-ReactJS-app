@@ -1,20 +1,21 @@
 import React from "react";
 import PostContainer from "./Post/PostContainer";
+import { useParams } from "react-router-dom";
 
 
 const Posts = (props) => {
 
-    let postData = props.state.postsData;
+    let postData = props.state.postData;
 
-    console.log(props.path);
+    let blogData = useParams();
 
-    // let matching = if () => {}
-
-    let matchBlog = props.state.blogData.filter(post => post.blogId === props.state.postsData.blogId)
+    let matchBlog = blogData.filter(blog => blog.id === postData.blogID);
 
     console.log(matchBlog);
 
-    let postElement = postData.map(post => <PostContainer key={post.id} postId={post.id} header={post.header} postMessage={post.message} />)
+    postData.forEach(post => {console.log(post.blogID)});
+
+    let postElement = postData.map(post => <PostContainer key={post.id} id={post.id} header={post.header} postMessage={post.message} />)
 
     return (
         <div>

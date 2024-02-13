@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Blog = (props) => {
 
-    let path = "/blog/" + props.blogId;
+    let path = "/blog/" + props.id;
 
     return(
         <div>

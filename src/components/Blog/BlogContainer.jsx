@@ -1,6 +1,5 @@
 import React from "react";
 import Blog from "./Blog";
-import PostContainer from "../Posts/Post/PostContainer";
 
 
 const BlogContainer = (props) => {
@@ -8,7 +7,7 @@ const BlogContainer = (props) => {
     return (
 
         <div>
-            <Blog blogId={props.blogId} title={props.title}/>
+            <Blog id={props.id} title={props.title}/>
         </div>
     )
 }

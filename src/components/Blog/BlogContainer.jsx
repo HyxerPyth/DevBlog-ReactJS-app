@@ -7,7 +7,7 @@ const BlogContainer = (props) => {
     return (
 
         <div>
-            <Blog id={props.id} title={props.title}/>
+            <Blog id={props.id} title={props.title} posts={props.posts}/>
         </div>
     )
 }

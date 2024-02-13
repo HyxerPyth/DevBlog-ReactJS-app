@@ -5,15 +5,13 @@ import { useParams } from "react-router-dom";
 
 const Posts = (props) => {
 
-    let postData = props.state.postData;
+    console.log(props.state);
 
-    let blogData = useParams();
+    let blogID = useParams();
 
-    let matchBlog = blogData.filter(blog => blog.id === postData.blogID);
+    let postData = props.state.blogData[blogID.id - 1].posts;
 
-    console.log(matchBlog);
-
-    postData.forEach(post => {console.log(post.blogID)});
+    // postData.forEach(post => {console.log(post.blogID)});
 
     let postElement = postData.map(post => <PostContainer key={post.id} id={post.id} header={post.header} postMessage={post.message} />)
 

@@ -1,5 +1,6 @@
 import React from "react";
 import BlogContainer from "../Blog/BlogContainer";
+import style from './BlogList.module.css'
 
 
 const BlogList = (props) => {
@@ -8,8 +9,10 @@ const BlogList = (props) => {
     let blogElement = blogData.map(blog => <BlogContainer key={blog.id} id={blog.id} title={blog.title} posts={blog.posts}/>)
 
     return (
-        <div>
+        <div className={style.buttonWrapper}>
+            <div className={style.button}>
             {blogElement}
+            </div>
         </div>
     );
 }

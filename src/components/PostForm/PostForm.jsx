@@ -11,10 +11,6 @@ const PostForm = (props) => {
 
     let newPostElement = React.createRef(); 
 
-    let onAddPost = () => {
-        props.addPost();
-    }
-
     let updatePostArea = () => {
         let text = newPostElement.current.value;
         props.updatePostArea(text);
@@ -45,7 +41,7 @@ const PostForm = (props) => {
             </div>
             <div>
                 <NavLink to="/selectoption">
-                    <button className={style.button} onClick={onAddPost} > Post </button>
+                    <button className={style.button} > Post </button>
                 </NavLink>
             </div>
         </div>

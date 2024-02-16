@@ -3,7 +3,7 @@ import SelectionContainer from "../../components/Selection/SelectionContainer";
 
 const SelectOption = (props) => {
     return (
-        <SelectionContainer />
+        <SelectionContainer store={props.store}/>
     );
 }
 

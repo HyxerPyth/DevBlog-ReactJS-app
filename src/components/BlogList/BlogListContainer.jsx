@@ -1,6 +1,6 @@
 import React from "react";
 import BlogList from "./BlogList";
-import { selectBlogActionCreator } from "../../redux/posts-reducer";
+import { addPostToBlogActionCreator, selectBlogActionCreator } from "../../redux/posts-reducer";
 
 
 
@@ -8,11 +8,16 @@ const BlogListContainer = (props) => {
 
     let state = props.store.getState().content;
 
-    let selectOption =(blogId) => {
-        props.store.dispatch(selectBlogActionCreator(blogId));
+    let onBlogSelect = (blogID) => {
+        let action = selectBlogActionCreator(blogID);
+        props.store.dispatch(action);
     }
 
-    return <BlogList selectOption={selectOption} state={state} />
+    let addPost = () => {
+        // props.store.dispatch(addPostToBlogActionCreator());
+    }
+
+    return <BlogList state={state} onBlogSelect={onBlogSelect} addPost={addPost}/>
 }
 
 export default BlogListContainer;

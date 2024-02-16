@@ -13,7 +13,7 @@ const Posts = (props) => {
 
     // postData.forEach(post => {console.log(post.blogID)});
 
-    let postElement = postData.map(post => <PostContainer key={post.id} id={post.id} header={post.header} postMessage={post.message} />)
+    let postElement = postData.map(post => <PostContainer key={post.id} id={post.id} header={post.header} postMessage={post.message}/>)
 
     return (
         <div>

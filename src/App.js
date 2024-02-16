@@ -25,7 +25,7 @@ const App = (props) => {
               <Route path="/" element={<Home store={props.store} />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/selectoption" element={<SelectOption />} />
+              <Route path="/selectoption" element={<SelectOption store={props.store} />} />
               <Route path="/existingblogs" element={<ExistingBlogs store={props.store} />} />
               <Route path="/newblog" element={<NewBlog />} />
               <Route path="/blog/:id" element={<PostsContainer store={props.store}/>} />

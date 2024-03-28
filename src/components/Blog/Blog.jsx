@@ -8,9 +8,8 @@ const Blog = (props) => {
     let path = "/blog/" + props.id;
 
     let onBlogSelect = () => {
-        let action = selectBlogActionCreator(props.id);
-        props.onBlogSelect(action)
-        props.addPost(props.id);
+        props.onBlogSelect(props.id);
+        console.log("ID dispatched: " + props.id);
     }
 
 

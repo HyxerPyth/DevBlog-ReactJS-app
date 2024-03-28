@@ -1,15 +1,15 @@
 import React from "react";
 import BlogList from "./BlogList";
-import { addPostToBlogActionCreator, selectBlogActionCreator } from "../../redux/posts-reducer";
+import { selectBlogActionCreator } from "../../redux/posts-reducer";
 
 
 
 const BlogListContainer = (props) => {
 
-    let state = props.store.getState().content;
+    let state = props.store.getState().content;dsa
 
     let onBlogSelect = (blogID) => {
-        let action = selectBlogActionCreator(blogID);
+        let action = selectBlogActionCreator(blogID, state.updatePostArea);
         props.store.dispatch(action);
     }
 

@@ -4,12 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 
 const Selection = (props) => {
-
-    let onPostSelect = () => {
-        props.selectPost();
-    }
-
-
+    
     return (
         <div className={style.contentWrapper}>
             <div className={style.buttonContainer}>
@@ -19,7 +14,7 @@ const Selection = (props) => {
                     </button>
                 </NavLink>
                 <NavLink to="/existingblogs">
-                    <button className={style.button} onClick={onPostSelect}>
+                    <button className={style.button}>
                         Existing blog
                     </button>
                 </NavLink>

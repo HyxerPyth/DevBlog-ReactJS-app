@@ -13,10 +13,10 @@ const PostForm = (props) => {
 
     let updatePostArea = () => {
         let text = newPostElement.current.value;
-        props.updatePostArea(text);
+        props.updateTempPostText(text);
     }
 
-    console.log(props.state.updatePostArea);
+    console.log(props.state.tempPostText);
 
     let onClickInstructions = () => {
         setShowInstructions(true);
@@ -29,7 +29,7 @@ const PostForm = (props) => {
     return (
         <div className={style.content}>
             <div>
-                <textarea className={style.textArea} onChange={ updatePostArea } onClick={ onClickInstructions } value={ props.state.updatePostArea } ref={ newPostElement } placeholder="Type here..." >
+                <textarea className={style.textArea} onChange={ updatePostArea } onClick={ onClickInstructions } value={ props.state.tempPostText } ref={ newPostElement } placeholder="Type here..." >
                 </textarea>
                 <div>
                     {ShowInstructions && (

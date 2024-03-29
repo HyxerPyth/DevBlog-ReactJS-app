@@ -7,8 +7,8 @@ import { selectBlogActionCreator } from '../../redux/posts-reducer';
 const SelectionContainer = (props) => {
 
     let selectPost = () => {
-        let action = selectBlogActionCreator();
-        props.store.dispatch(action)
+        // let action = selectBlogActionCreator();
+        // props.store.dispatch(action)
     }   
 
     return (

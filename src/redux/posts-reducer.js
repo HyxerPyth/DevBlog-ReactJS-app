@@ -3,6 +3,9 @@
 const UPDATE_POST_AREA = "UPDATE-POST-AREA";
 const SELECT_BLOG = "SELECT-BLOG";
 
+const UPDATE_TEMP_POST_TEXT = 'UPDATE_TEMP_POST_TEXT';
+const ADD_POST_TO_BLOG = 'ADD_POST_TO_BLOG';
+
 //Initial state
 
 let initialState = {
@@ -35,27 +38,26 @@ let initialState = {
 
 const postsReducer = (state = initialState, action) => { 
     switch(action.type) {
-            case SELECT_BLOG:
-                console.log("SELECT_BLOG", action);
-                if (action.blogId !== undefined && state.blogData[action.blogId] !== undefined) {
-                    let newPost = {
-                        id: state.blogData[action.blogId].posts.length + 1,
-                        header: "EXAMPLE NEW POST'S HEADER",
-                        message: state.updatePostArea
-                    };
-                    let updatedPosts = [...state.blogData[action.blogId].posts, newPost];
-                    let updatedBlogData = [...state.blogData];
-                    updatedBlogData[action.blogId] = { ...state.blogData[action.blogId], posts: updatedPosts };
+        case UPDATE_TEMP_POST_TEXT:
+            return {
+                ...state,
+                tempPostText: action.payload
+            };
+        case ADD_POST_TO_BLOG:
+            const { blogId, post } = action.payload;
+            const updatedBlogData = state.blogData.map(blog => {
+                if (blog.id === blogId) {
                     return {
-                        ...state,
-                        blogData: updatedBlogData,
-                        tempPostText: action.blogId
+                        ...blog,
+                        posts: [...blog.posts, post]
                     };
                 }
-                return {
-                    ...state,
-                    tempPostText: action.blogId
-                };
+                return blog;
+            });
+            return {
+                ...state,
+                blogData: updatedBlogData
+            };
         case UPDATE_POST_AREA:
             return {
                 ...state,
@@ -69,7 +71,9 @@ const postsReducer = (state = initialState, action) => {
 //Action creators
 
 // export const addPostToBlogActionCreator = (blogId, text) => ({type: ADD_POST_TO_BLOG, blogId, text});
-export const selectBlogActionCreator = (blogId, body) => ({type: SELECT_BLOG, blogId, body});
+export const selectBlogActionCreator = (blogId) => ({type: SELECT_BLOG, blogId});
 export const updatePostAreaActionCreator = (body) => ({type: UPDATE_POST_AREA, body: body});
+export const updateTempPostTextActionCreator = (text) => ({type: UPDATE_TEMP_POST_TEXT, payload: text});
+export const addPostToBlogActionCreator = (blogId, post) => ({type: ADD_POST_TO_BLOG, payload: { blogId, post }});
 
 export default postsReducer;

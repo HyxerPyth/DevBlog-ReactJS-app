@@ -1,5 +1,5 @@
 import React from "react";
-import { updatePostAreaActionCreator } from "../../redux/posts-reducer";
+import { updatePostAreaActionCreator, updateTempPostTextActionCreator } from "../../redux/posts-reducer";
 import PostForm from "./PostForm";
 
 
@@ -12,7 +12,12 @@ const PostFormContainer = (props) => {
         props.store.dispatch(action)
     }
 
-    return <PostForm updatePostArea={updatePostArea} state={props.store.getState().content}/>
+    let updateTempPostText = (text) => {
+        let action = (updateTempPostTextActionCreator(text))
+        props.store.dispatch(action)
+    }
+
+    return <PostForm updatePostArea={updatePostArea} updateTempPostText={updateTempPostText} state={props.store.getState().content}/>
 }
 
 
